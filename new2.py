@@ -29,25 +29,27 @@ end_of_y1 = -(PIPEHEIGHT-300)
 
 x1, x2 = 0, 0
 i = 0
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
 
-    screen.blit(background, (0, 0))
+print(upperpipe.get_width())
+# while True:
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             pygame.quit()
+#             sys.exit()
 
-    while i < 2:
+#     screen.blit(background, (0, 0))
 
-        y1 = random.randrange(start_of_y1, end_of_y1)     #To randomly generate the position of upper pipe
+#     while i < 2:
 
-        leftover_upper = PIPEHEIGHT - (abs(y1))    #Position of upperpipe left after y = 0 or (top)
+#         y1 = random.randrange(start_of_y1, end_of_y1)     #To randomly generate the position of upper pipe
 
-        y2 = leftover_upper + offset                    #For position of lowerpipe
+#         leftover_upper = PIPEHEIGHT - (abs(y1))    #Position of upperpipe left after y = 0 or (top)
+
+#         y2 = leftover_upper + offset                    #For position of lowerpipe
     
-        screen.blit(upperpipe, (x1, y1))
-        screen.blit(lowerpipe, (x2, y2))
-        pygame.display.flip()
-        x1, x2 = x1 + 150, x2 + 150
+#         screen.blit(upperpipe, (x1, y1))
+#         screen.blit(lowerpipe, (x2, y2))
+#         pygame.display.flip()
+#         x1, x2 = x1 + 150, x2 + 150
 
-        i += 1
+#         i += 1
